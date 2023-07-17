@@ -14,7 +14,7 @@ public class Test12 {
 		do {
 			System.out.print("정수값：");
 			n = scan.nextInt();
-		} while (n <= 0);
+		} while (n <= 0); // 특정 조건일 경우 무한반복을 원하면 do-while문
 
 		int no = 0; 			// 자릿수
 		while (n > 0) {

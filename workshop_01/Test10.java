@@ -11,7 +11,7 @@ public class Test10 {
 		do {
 		  System.out.print("n 값: ");
 		  n = scan.nextInt();
-		}while(n<=0);
+		}while(n<=0);  // 참일 경우, do 실행문을 반복실행
 		
 		for(int i=1; i<=n; i++) {
 			sum += i;
