@@ -7,7 +7,8 @@ public class TestPet { // 클래스
 	System.out.println(c.getName());
 	System.out.println(c.getAge());
 	System.out.println(c.getGender());
-	
+	System.out.println("----------------------------");
+
 	// 수정
 	c.setName("망치");
 	c.setAge(3);
@@ -15,7 +16,8 @@ public class TestPet { // 클래스
 	System.out.println(c.getName());
 	System.out.println(c.getAge());
 	System.out.println(c.getGender());
-	
+	System.out.println("----------------------------");
+
 	// 수정2
 	c.setCat(4, "수컷");
 	System.out.println(c.getName());

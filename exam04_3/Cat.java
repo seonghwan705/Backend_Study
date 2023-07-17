@@ -9,7 +9,7 @@ public class Cat {
 	
 	//생성자
 	public Cat() {}
-	public Cat(String name, int age, String sex) {
+	public Cat(String name, int age, String gender) {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
@@ -33,7 +33,7 @@ public class Cat {
 	//setter 메서드
 	// 나이수정
 	public void setAge(int age) {
-		this.age = age;
+		this.age = age; 
 	}
 	// 이름수정
 	public void setName(String name) {

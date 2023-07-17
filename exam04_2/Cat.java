@@ -12,7 +12,7 @@ public class Cat {
 	public Cat() {
 	}
 
-	public Cat(String name, int age, String sex) {
+	public Cat(String name, int age, String gender) {
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
