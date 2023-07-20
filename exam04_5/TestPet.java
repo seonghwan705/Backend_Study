@@ -53,7 +53,7 @@ public class TestPet {
 	public static void rdt(Cat x) {
 		x.setAge(10);
 	}
-
+// end TestPet
 	public static void main(String[] args) {
 		
 		//기본형

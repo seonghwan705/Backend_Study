@@ -1,0 +1,43 @@
+package exam07_2_상속_object_toString;
+
+public class Dog extends Pet {
+	@Override
+	public String toString() {
+		return String.format("Dog 이름: %s, Dog 나이:%d, Dog 성별:%s \n", name, age, gender);
+	}
+
+	String gender;
+	
+	// 오버라이딩
+	@Override
+	public void eat() {
+		System.out.println("Dog.eat");
+	}
+
+	@Override
+	public void sleep() {
+		System.out.println("Dog.sleep");
+	}
+
+	public Dog() {}
+	public Dog(String name, int age) {
+		super(name, age);
+	}
+
+	public Dog(String name, int age, String gender) {
+		super(name, age);
+		this.gender = gender;
+	}
+
+	public String getgender() {
+		return gender;
+	}
+	
+	public void setgender(String gender) {
+		this.gender = gender;
+	}
+	
+	
+
+
+}
