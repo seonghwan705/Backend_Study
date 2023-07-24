@@ -1,4 +1,4 @@
-package exam07_interface;
+package exam07_5_interface;
 
 // 인터페이스
 interface Y1{ // 인터페이스가 가질 수 있는 것 : 상수, 추상메서드, default메서드, static메서드
@@ -7,6 +7,7 @@ interface Y1{ // 인터페이스가 가질 수 있는 것 : 상수, 추상메서
 	final int NUM=10; 
 	// 상수(변하지 않고 고정된 값)엔 final 붙여야함, 자동으로 public static final 지정된다.
 	int SIZE=20; // 변수처럼 보이지만, 변수가 아닌 상수
+	final char[] COUNT = null;
 	public static final int count = 30; // 권장
 	
 	// 2) 추상메서드 (인터페이스를 사용하는 가장 큰 목적)
@@ -60,6 +61,21 @@ class K3 extends Object implements Y2, Y3{
 	public void x() {}
 }
 
+class Z implements Y1{
+
+	@Override
+	public void a() {	
+	}
+	@Override
+	public void a2() {	
+	}
+	@Override
+	public void a3() {	
+	}
+	
+}
+
+
 
 public class InterfaceTest {
 
@@ -72,6 +88,16 @@ public class InterfaceTest {
 		// 다형성 : 클래스 K의 인터페이스가 Y2 (상위버전)
 		Y2 k2 = new K(); // 따라서 참조타입으로 설정가능하여 다형성을 만들 수 있음
 		k2.x();
+		
+		Z z = new Z();
+		z.a();
+		z.a2();
+		z.a3();
+		System.out.println(Y1.NUM);
+		System.out.println(Y1.SIZE);
+		System.out.println(Y1.COUNT);
+		z.b(); // default 메서드는 일반클래스의 concrete 메서드처럼 사용한다.
+		Y1.c(); // static 메서드 
 	}
 
 }

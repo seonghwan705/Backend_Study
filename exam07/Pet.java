@@ -1,6 +1,7 @@
 package exam07;
 
 public class Pet {
+	
 	String name;
 	int age;
 	
@@ -10,9 +11,7 @@ public class Pet {
 	public void sleep() {
 		System.out.println("Pet.sleep");
 	}
-	public Pet() {
-		// TODO Auto-generated constructor stub
-	}
+	public Pet() {}
 	public Pet(String name, int age) {
 		this.name = name;
 		this.age = age;

@@ -1,6 +1,7 @@
 package exam07;
 
 public class Dog extends Pet {
+	
 	String gender;
 	
 	// 오버라이딩
