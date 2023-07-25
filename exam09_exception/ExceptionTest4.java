@@ -1,4 +1,4 @@
-package exam09;
+package exam09_exception;
 
 
 class Test3{
@@ -17,7 +17,7 @@ class Test3{
 			String n=null;
 			System.out.println(n.length());
 			
-		}catch(ArithmeticException e) {  
+		}catch(ArithmeticException e) {  // catch : 아래로 갈수록 같거나 확대.
 			System.out.println("error: 0 으로 나누어 발생");
 		}catch(NullPointerException e) {  
 			System.out.println("error: 객체 생성 필요");

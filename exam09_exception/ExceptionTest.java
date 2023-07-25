@@ -1,4 +1,4 @@
-package exam09;
+package exam09_exception;
 
 public class ExceptionTest {
 

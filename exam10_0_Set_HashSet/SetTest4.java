@@ -1,4 +1,4 @@
-package exam10;
+package exam10_0_Set_HashSet;
 
 import java.util.HashSet;
 import java.util.Iterator;

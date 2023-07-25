@@ -1,4 +1,4 @@
-package exam10;
+package exam10_0_Set_HashSet;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -7,6 +7,7 @@ public class SetTest {
 
 	public static void main(String[] args) {
 		// Set 계열 : 순서가 없고 중복이 불가한 자료구조
+		// iterator는 set과 list만 사용가능
 		
 		HashSet set = new HashSet();
 		

@@ -1,4 +1,4 @@
-package exam09;
+package exam09_exception;
 
 import java.io.IOException;
 
@@ -19,7 +19,6 @@ class Child extends Parent{
 public class ExceptionTest7 {
 	public static void main(String[] args) {
 	
-
 	}
 
 }
