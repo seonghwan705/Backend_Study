@@ -21,7 +21,7 @@ public class MapTest2 {
 		System.out.println("size: "+map.size()); // 사이즈
 		map.replace("p3", "세종"); // 값 수정
 		map.remove("p3"); // 값 삭제
-		map.clear(); // 전체 삭제
+//		map.clear(); // 전체 삭제
 		
 		// 출력방법 1 - toString
 		System.out.println(map.toString());

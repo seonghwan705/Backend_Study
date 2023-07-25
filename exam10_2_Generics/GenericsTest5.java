@@ -2,7 +2,7 @@ package exam10_2_Generics;
 
 import java.util.Date;
 
-// <? super >
+// <? super E >
 
 
 

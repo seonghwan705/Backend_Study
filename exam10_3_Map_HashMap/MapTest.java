@@ -22,7 +22,7 @@ public class MapTest {
 		System.out.println(map.toString());
 		System.out.println("----------------------------------");
 		
-		// 출력방법 2 - get (key)
+		// 출력방법 2 - get (key) ==> hashmap은 index가 key값; 
 		
 		System.out.println(map.get("p1"));
 		System.out.println(map.get("p2"));
@@ -32,9 +32,11 @@ public class MapTest {
 		
 		// 출력방법 3 - keySet() ==> key값을 반환 (주로 key가 많을 때 사용)
 		
-		Set<String> keys = map.keySet();
-		System.out.println(keys);
+		Set<String> keys = map.keySet(); // HashSet 의 부모인 Set => 다형성으로 생성
+		System.out.println(keys.toString());
 		System.out.println("----------------------------------");
+		
+		// 출력방법 4 - for each 
 		
 		for (String key : keys) {
 			System.out.println(key+"\t"+map.get(key));
