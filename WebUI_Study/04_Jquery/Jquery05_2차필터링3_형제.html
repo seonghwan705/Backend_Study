@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        // DOM Tree가 모두 완료된후 호출
+        $(document).ready(function(){
+        
+           // 가. $(selector1).next() ==>  1차 필터링후 바로 뒤 형제요소만 반환
+           // 가. $(selector1).next(selector2) ==>  1차 필터링후 selector2와 일치하는 뒤 형제요소 반환
+            // $("li").next().css("color","red");
+            // $("li").next(".selected").css("font-size","30px");
+            
+
+            // 나. $(selector1).nextAll() ==>  1차 필터링후 바로 뒤 형제들 반환
+            // 니. $(selector1).nextAll(selector2) ==>  1차 필터링후 selector2와 일치하는 뒤 형제들 반환\
+            // $("li:first").nextAll().css("color","red");
+            // $("li:first").nextAll(".selected").css("font-size","30px");
+            
+            // 다. $(selector1).prev() ==>  1차 필터링후 바로 앞 형제요소만 반환
+           //  다. $(selector1).prev(selector2) ==>  1차 필터링후 selector2와 일치하는 앞 형제요소 반환
+            // $("li").prev().css("color","red");
+            // $("li").prev(".selected").css("font-size","30px");
+
+            // 라. $(selector1).prevAll() ==>  1차 필터링후 바로 앞 형제들 반환
+            // 라. $(selector1).prevAll(selector2) ==>  1차 필터링후 selector2와 일치하는 앞 형제들 반환\
+            // $("li:last").prevAll().css("color","red");
+            // $("li:last").prevAll(".selected").css("font-size","30px");
+
+            // 마. $(selector1).siblings() ==>  1차 필터링후 바로 앞/뒤 형제들 반환
+            // 마. $(selector1).siblings(selector2) ==>  1차 필터링후 selector2와 일치하는 앞/뒤 형제들 반환
+            $("li.xxx").siblings().css("color","red");
+            $("li.xxx").siblings(".selected").css("font-size","30px");
+        });
+
+    </script>
+
+
+</head>
+<body>
+  <ul>
+    <li>A</li>
+    <li class="selected">B</li>
+    <li>C</li>
+    <li class="xxx">D</li>
+    <li>E</li>
+    </ul>
+</body>
+</html>
+</html>

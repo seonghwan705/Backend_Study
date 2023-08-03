@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+      
+      // 함수 ( function)
+
+        // 가. default 파라미터:  undefined 방지
+        function fun2(n=1, n2=2){
+            console.log("fun2", n, n2);
+        }
+        
+        fun2(10, "홍길동");   // fun2 10 홍길동
+        fun2();              // fun2 1 2
+        fun2(20);             // fun2 20 2
+        
+        
+        // 나. 가변인자 ( ...변수 ) ==> 배열로 처리됨
+        function fun3(n, n2, ...n3){
+            console.log("fun3",n, n2, n3);
+        }
+        fun3(10,20,30);
+        fun3(10,20,30,40,50,60);
+
+
+         // 다. 혼합( default 파라미터 + 가변인자)
+         function fun4(n, n2=0, ...n3){
+            console.log("fun3",n, n2, n3.toString());
+        }
+        fun4(); // fun3 undefined 0
+        fun4(10);   // fun3 10 0 
+        fun4(10,20,30);  // fun3 10 20 [30]
+        fun4(10,20,30,40,50); // fun3 10 20 [30,40,50]
+        
+
+    </script>
+
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+    <button onclick="req()">구글</button>
+    <button onclick="req2()">새로고침</button>
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+     /* visibility : display와 비슷하게 태그의 가시성을 결정! */
+
+      #box{
+        visibility: hidden;  /* 영역유지 됨 */
+      }
+      
+      /* collapse 는 hidden 과 유사하다고 보면됌 */
+      table{
+        visibility:collapse;
+      }
+      
+       /* opacity : 투명도 */
+      span{
+        opacity: 0.3;
+      }
+    </style>
+</head>
+<body>
+  <div>
+     <span>Dummy</span>
+     <div id="box">
+        <span>죽는날 까지 하늘을 우러러 한점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다.</span>
+     </div>
+     <span>Dummy</span>
+  </div>
+
+  <table border="1">
+    <tr>
+        <th>나이</th>
+        <th>성별</th>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>남</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>여</td>
+    </tr>
+ </table>
+  </body>
+</body>
+</html>

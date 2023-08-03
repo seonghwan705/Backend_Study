@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+      
+        // 연산자 4 -  비교 연산자 => 실행결과는 논리값
+
+        //1. equal 연산자 ( == ,  값만 비교)
+        console.log("10" == 10); // true
+        
+        //2. identical 연산자 ( === , 값과 데이터 모두 비교)
+        console.log("10" === 10); // false
+
+
+
+        // undefined 비교는 === 사용해야 된다.
+        var n;
+
+        console.log("equal:", n==undefined);  // true
+        console.log("identical:", n===undefined); // true
+
+        var n=null;
+        console.log("equal(null):", n==undefined);  // true
+        console.log("identical(null):", n===undefined); // false
+
+    </script>
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+   
+</body>
+</html>

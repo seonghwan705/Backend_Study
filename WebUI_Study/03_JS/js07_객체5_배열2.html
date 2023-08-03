@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Array 객체 : 배열관리
+
+        // 생성방법
+        var arr = new Array(10,20,30); 
+        console.log(arr);
+
+        var arr = [10,20,30]; // 권장
+        console.log(arr);
+
+        // 1. 값 변경
+        arr[0]=100;
+        console.log(arr.toString()); // 100, 20, 30
+
+        // 2. 값 추가 (맨 뒤에 값 추가) - push()
+        arr.push(40);
+        arr.push(50,60,70);
+        console.log(arr.toString()); // 100,20,30,40,50,60,70
+
+        // 3. 값 삭제 (마지막 값 삭제) - pop()
+        arr.pop();
+        arr.pop();
+        console.log(arr.toString()); // 100,20,30,40,50
+
+        // 4. 특정위치에 값 삽입 및 삭제 - splice(index, howmany, items);
+        // arr.splice(시작위치, 삭제할 개수, 저장할 값, 저장할값,...);
+
+        // index 0번째 위치에 1,2,3 값을 삽입
+        arr.splice(0,0,1,2,3); 
+        console.log(arr.toString()); // 1,2,3,100,20,30,40,50
+
+        // index 3번째 위치에서부터 3개의 값을 삭제
+        arr.splice(3,3);
+        console.log(arr.toString());
+
+        // index 1번째 위치에서부터 1개 삭제하고 900,800 삽입
+        arr.splice(1,1,900,800);
+        console.log(arr.toString());
+    
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

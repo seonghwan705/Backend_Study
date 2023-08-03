@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        // DOM Tree가 모두 완료된후 호출
+        $(document).ready(function(){
+        
+            //가.  $(selector).eq(idx) ==> 1차 필터링후 idx와 일치하는 요소 2차 필터링한다. 0 부터시작
+            // $("li").eq(0).css("color","red");
+            
+            //나.  $(selector1).filter(selector2) ==> selector1으로 1차 필터링후 selector2로  2차 필터링한다. 
+            // $("p").filter(".middle").css("color","red");
+            
+            //다.  $(selector1).not(selector2) ==> selector1으로 1차 필터링후 selector2가 아닌것으로  2차 필터링한다. 
+            // $("p").not(".middle").css("color","red");
+            
+            //라.  $(selector1).is(selector2) ==> selector1으로 1차 필터링후 selector2에 해당하는 2차 필터링이 존재하면 true 반환
+            // var result = $("p").filter("[class]").is(".middle");
+            // console.log(result);
+            
+            //마.  $(selector1).has(selector2) ==> selector1으로 1차 필터링후 selector2를 포함하는 2차 필터링 요소 반환
+            // $("li").has("span").css("color","red");
+            
+            //바.  $(selector1).first() ==> selector1으로 1차 필터링후 첫번째 요소 반환
+            // $("li").first().css("color","red");
+            // $("li").last().css("font-size","40px");
+            
+            //사.  $(selector1).slice(start [, end]) ==> selector1으로 1차 필터링후 start~end 범위의 요소 반환
+            // $("li").slice(0,3).css("font-size","40px");
+            
+            //아.  $(selector1).map(fn) ==> selector1으로 1차 필터링후 fn함수를 적용해서 다시 반환
+            // var result = $("li").map(function(idx, ele){
+            //     console.log(idx, ele, ele.innerText);  // ele? JS 객체
+            //     return ele.innerText.toUpperCase();
+            // });
+
+            // var result = $("li").map(function(idx, ele){
+            //     console.log(idx, ele, ele.innerText);  // ele? JS 객체
+            //     console.log($(ele), $(ele).text());  // $(ele)? jQuery 객체
+            //     return $(ele).text().toUpperCase();
+            // });
+
+            // this 
+            var result = $("li").map(function(idx, ele){
+                 console.log(ele, this); // this는 ele에 전달된 요소의미, JS 객체
+                 console.log($(ele), $(this)); // this는 ele에 전달된 요소의미, jQuery 객체
+                 console.log($(ele).text(), $(this).text()); // this는 ele에 전달된 요소의미, jQuery 객체
+                 return $(this).text().toUpperCase();
+            });
+
+            console.log(result);
+        });
+
+    </script>
+
+
+</head>
+<body>
+    <p>text</p>
+    <p class="middle">Middle <span>text</span></p>
+    <p class="final">final text</p>
+    
+    <div>
+            <ul>
+                <li>list item 1</li>
+                <li>list item 2</li>
+                <li><span>list item 3</span></li>
+                <li>list item 4</li>
+            </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        
+        // 상수
+        const num = 10; // 기본형 
+        console.log(num);
+        const num2 = [10,20];  //참조형
+        num2[0]=100;     // 가능
+        // num2 = 100;   // 에러
+
+        if(true){
+            const x = 20;
+            // const x = 20;   // 중복선언 불가
+        }
+        // console.log(x);     // 블럭 스코프 
+
+        // num = 20;           // 값 변경 불가
+
+    </script>
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+   
+</body>
+</html>

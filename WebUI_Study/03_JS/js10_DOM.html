@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function init(){
+          var p = document.querySelector("p");
+          console.dir(p);
+
+          //값 얻기
+          console.log(p.innerText);
+          console.log(p.innerHTML);
+
+          //값 변경
+          p.innerText="world";
+          p.innerHTML="<h1>world</h1>";
+        }
+        // 구조상 p태그가 아래있기 때문에 p태그를 찾기 못함
+        // onload 를 이용해서 함수안에 쿼리셀렉터를 넣고 태그를 찾아냄. 
+        // 자바스크립트에서 태그의 객체(body)에 접근하는 방법 
+        // 'document.quertSelector'
+    </script>
+<body onload="init()"> 
+        <p><span>Hello</span></p>
+
+    <!-- <script>
+        var p = document.querySelector("p");
+        console.log(p);
+        // 구조상 p태그가 위에 있기 때문에 p태그를 찾음
+    </script> -->
+
+</body>
+</html>

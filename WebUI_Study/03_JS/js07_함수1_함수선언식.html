@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+      
+      // 함수 ( function)
+
+      //1. 함수 선언식 ( 이름있는 )
+        console.log("1");
+
+        //가. 파라미터 없고 리턴값 없음.
+        function fun(){
+            console.log("fun");
+        }
+        fun();
+        
+        //나. 파라미터 있고 리턴값 없음.
+        function fun2(n, n2){
+            console.log("fun2", n, n2);
+        }
+        // 호출시 갯수(argument list)가 달라도 된다.
+        fun2(10, "홍길동");  // fun2 10 홍길동
+        fun2();   // fun2 undefined undefined
+        fun2(20, "홍길동2", 100,300 ); // 인자 넘치면 생략
+        
+        //다. 파라미터 없고 리턴값 있음.
+        function fun3(){
+            console.log("fun3");
+            return 100;   
+            // 리턴값은 반드시 하나만 사용 가능. 만약에 여러값을 
+            // 리턴하고자 한다면 배열등에 저장해서 리턴한다.
+        }
+        var result = fun3();  // fun3함수가 리턴되는 값인 100을 저장하기 위해서 result 변수가 필요하다.
+        console.log(result);
+        
+        //라. 파라미터 있고 리턴값 있음.
+        function fun4(n, n2){
+            console.log("fun4", n, n2);
+            return n+n2;
+        }
+        var result = fun4(10,20);
+        console.log(result);
+
+
+        var x = Number.parseInt("10");
+        var x2 = prompt("정수입력");
+
+        console.log("end");
+
+
+
+
+
+      
+
+
+
+    </script>
+
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+    <button onclick="req()">구글</button>
+    <button onclick="req2()">새로고침</button>
+   
+</body>
+</html>

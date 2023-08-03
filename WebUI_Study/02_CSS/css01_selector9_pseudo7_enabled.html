@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* 활성화 또는 비활성화 태그 반환 */
+
+      /* <input> 태그의 disabled 속성은 해당 <input> 요소가 
+        비활성화됨을 명시합니다.
+
+        disabled 속성이 명시된 <input> 요소는 사용할 수 없으며, 
+        사용자가 클릭할 수도 없습니다.
+
+        또한, 폼 데이터가 제출될 때도 disabled 
+        속성이 명시된 <input> 요소의 데이터는 제출되지 않습니다. */
+        
+      input:enabled{
+        background-color: yellow;
+      }
+      input:disabled{
+        background-color: red;
+      }
+
+    </style>
+</head>
+
+<body>
+<!-- 기본값은 enabled -->
+  이름:<input type="text" disabled>
+  나이:<input type="text">
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>  
+    
+    <script>
+       // DOM Tree가 모두 완료된 후 호출
+       
+       $(document).ready(function(){
+
+        // 가. li : first-child ==> li의 부모기준으로 첫번째 자식 => a
+        // $("li:first-child").css("color","red");
+
+        // 나. li : last-child ==> li의 부모기준으로 마지막 자식 => f
+        // $("li:last-child").css("color","red");
+
+        // 다. li : nth-child(n) ==> li의 부모기준으로 n번째 자식, 1부터 시작
+        // $("li:nth-child(3)").css("color","red");
+        
+
+        // 라. li : nth-child(2n) ==> li의 부모기준으로 2배수 자식, 1부터 시작 
+        // $("li:nth-child(2n)").css("color","red");
+        
+        // 마. td : only-child ==> td의 부모기준으로 하나의 자식만 있는 요소 반환 
+         $("td:only-child").css("color","red");
+       }); 
+
+    </script>
+</head>
+<body>
+  <input type="text" value="one">
+  <input type="text" value="two">
+  <input type="text" value="three">
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+  </ul>
+  <table border="1">
+        <tr>
+          <td>#1</td>
+          <td>#2</td>
+          <td>#3</td>
+          <td>#4</td>
+          <td>#5</td>
+        </tr>
+        <tr>
+          <td>#6</td>
+          <td>#7</td>
+          <td>#8</td>
+          <td>#9</td>
+          <td>#10</td>
+        </tr>
+        <tr>
+          <td colspan="5">#11</td>
+        </tr>
+  </table>	
+  
+</body>
+</html>

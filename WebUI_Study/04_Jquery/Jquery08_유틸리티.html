@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        
+
+        // DOM Tree가 모두 완료된후 호출
+        $(document).ready(function(){
+        
+            // 배열 데이터 관련된 유틸리티 메서드
+            var months = [ 'January', 'February', 'March', 'April', 'May',
+                           'June', 'July', 'August', 'September', 'October',
+			                     'November', 'December' ];
+
+           // $.each(arr, fun);  ==> 단순 반복 처리 , return false 하면 반복처리 중지                          
+           $.each(months, function(idx, obj){
+                console.log(idx, obj);
+           });
+
+           $.each(months, function(idx, obj){
+                console.log(idx, obj);
+                return obj != 'March';
+              });
+              
+              // $.grep(arr, fun) ==> 필터링후 배열로 반환.  필터링조건은 fun에서 return 참조건; 형식 사용.
+              var arr = $.grep(months, function(obj, idx){
+                   console.log(idx, obj);
+                   return obj.length >= 5; 
+                });
+              console.log(arr);
+
+            
+           // $.map(arr, fun)   ==> 원본배열을 fun함수를 적용하여 가공후 배열 반환.
+             var arr2 = $.map(months, function(obj, idx){
+                    console.log(idx, obj);
+                    return obj.substr(0,3);
+             });
+             console.log(arr2);
+
+        });   
+    </script>
+
+
+</head>
+<body>
+       
+     
+</body>
+</html>

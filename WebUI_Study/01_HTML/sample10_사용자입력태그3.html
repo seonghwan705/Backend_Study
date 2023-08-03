@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>안녕하세요</title>
+</head>
+<body>
+    <!-- 사용자 데이터 입력 태그 -->
+
+    <form action="target.html">
+        
+        이름:<input type="text" name="username" value="xxx"><br>
+        비번:<input type="password" name="passwd"><br>
+
+        <input type="radio" name="gender" value="남">남
+        <input type="radio" name="gender" value="여" checked>여<br>
+
+        <input type="checkbox" name="fruit" value="사과" checked="checked">사과
+        <input type="checkbox" name="fruit" value="바나나" checked>바나나
+        <input type="checkbox" name="fruit" value="메론">메론 <br>
+
+        <input type="color" name="m_color">색상표 <br>
+        <input type="date" name="m_date">달력 <br>
+
+        <!-- @ 문자 필수 -->
+        <input type="email" name="m_email">이메일 <br>
+
+        <input type="file" name="m_file"><br>
+        <input type="file" name="m_file" accept="image/*"><br>
+        <input type="file" name="m_file" multiple><br>
+        <input type="file" name="m_file" multiple="multiple"><br>
+
+        <!-- 사용자에게 태그를 보여주지 않고 임의의 값을 서버에 전달할 때 -->
+        <input type="hidden" name="address" value="seoul"><br>
+
+
+        <input type="number" name="count"><br>
+        <input type="number" name="count" min="0" max="5"><br>
+        <input type="number" name="count" step="5"><br>
+
+
+        <input type="range" name="m_range" min="1" max="10"> <br>
+
+        <input type="search" name="m_search"> <br>
+
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select><br>
+
+        <!-- 다른 input태그는 값을 value속성에 설정한다.
+        textarea는 value 속성이 아닌 태그의 몸체(body,content)에 지정한다. -->
+        <textarea name="message" rows="10" cols="30">
+            The cat was playing in the garden.
+        </textarea>
+
+        <input type="submit"  value="로그인2">
+        <input type="reset">
+
+    </form>
+</body>
+</html>

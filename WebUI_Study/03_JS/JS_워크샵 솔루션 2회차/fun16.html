@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   
+   /*
+     나이 구하기
+   */
+   function myAge(m){
+	  var year = m.split("/")[0]; // 1981
+	  var current = new Date().getFullYear(); // 2023  
+	  var age =  current - year; // 2023-1981
+	  return age;
+   }
+   
+   var ssn = '1981/10/20';
+   var age = myAge(ssn);
+   console.log("현재 나이:", age );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

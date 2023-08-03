@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    	.container{
+            background-color: powderblue;
+            display: flex;
+            flex-direction: row;
+    }
+	.item{
+
+      
+
+		background-color: tomato;
+		color:white;
+		border:1px solid white;
+        width: 50px;
+	}
+    </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- order를 이용하여 아이템의 순서를 바꾸기
+    값이 적을수록 앞쪽에 배치, 기본값 : 0  -->
+
+    <div class="item" style="order:3;">1</div>
+    <div class="item" style="order: 2;">2</div>
+    <div class="item" style="order: 1;">3</div>
+    <div class="item" style="order: -1;">4</div>
+    <div class="item" style="order: 0;">5</div>
+</div>
+</body>

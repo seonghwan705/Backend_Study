@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>안녕하세요</title>
+</head>
+<body>
+    <!-- table태그, 테이블만들기 -->
+    <!-- 테이블 테두리와 구분선 만들기 : border, 숫자는 굵기 -->
+    <table border="10">
+
+        <!-- 열 병합하는법 -->
+       <h2>열병합</h2>  <!--제목-->
+       
+       <tr>
+            <th>이름</th>
+            <th colspan="2">전화번호</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>010</td>
+            <td>02</td>
+        </tr>
+        
+    </table>
+
+    <table border="10">
+
+        <!-- 행 병합하는법 -->
+       <h2>행병합</h2>  <!--제목-->
+       
+       <tr>
+            <th>이름</th>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <th rowspan="2">전화번호</th>
+            <td>010</td>
+        </tr>
+        <tr>
+            <td>032</td>
+        </tr>
+        
+    </table>
+        <br>
+        <br>
+
+    <table border="10">
+       
+        <!-- 그룹화 순서 : thead, tfoot, tbody -->
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+       
+        <tfoot>
+            <tr>
+                <td>총합</td>
+                <td>10000</td>
+            </tr>
+        </tfoot>
+
+       <tbody>
+             <tr>
+                   <td>10</td>
+                   <td>9000</td>
+             </tr>
+             <tr>
+                   <td>11</td>
+                   <td>1000</td>
+             </tr>
+       </tbody>
+        
+    </table>
+</body>
+</html>
+
+<!-- 
+1)thead
+2)tfoot
+3)tbody 순으로 지정해야하는 것은 html4
+
+html5에서는 임의로 지정가능 -->

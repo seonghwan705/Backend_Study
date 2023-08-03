@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+      /* tag의 속성으로 찾기, 문법 : [속성명] */
+
+      /* id 속성을 가지고 있는 태그 찾기 */
+
+      [id] {
+         color: red;
+      }
+
+      /* 태그 + 속성명으로 찾기 */
+      a[id]{
+         background-color: aqua;
+      }
+    </style>
+</head>
+
+<body>
+	<h1 id="one">홍길동</h1>
+	<h2>이순신</h2>
+	<h3 id="two">유관순</h3>
+	<h2>강감찬</h2>
+	<h2>윤봉길</h2>
+	<a href="#" id="link">go</a>
+</body>
+</html>

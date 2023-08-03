@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        
+       // 1. 기본형 변수
+       let n = 10;
+       let n2 = n;
+
+       console.log(n, n2); // 10 10
+       // 원본인 n 값 변경 ==> 기본형 변수이기 때문에 n2 값 영향 없음
+       n = 20;
+       console.log(n, n2); // 20 10
+       
+       //2. 참조형 변수
+       let x = [10,20,30];
+       let x2 = x;
+       console.log(x, x2); //[10,20,30] [10,20,30]
+       
+       // 원본인 x 값 변경 ==> 참조형 변수이기 때문에 x2 값 영향 있음
+       x[0]=100;
+       console.log(x, x2); //[100,20,30] [100,20,30]
+       
+    </script>
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+   
+</body>
+</html>

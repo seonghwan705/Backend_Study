@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        // DOM Tree가 모두 완료된후 호출
+        $(document).ready(function(){
+        
+            //이벤트 적용
+            // $("선택자").on("이벤트타입", 함수);
+
+            $("#get").on("click", function(){
+                var txt = $("p").text();
+                var htm = $("p").html();
+                var v = $("#addr1").val();
+                var at = $("a").attr("href");
+
+                console.log(txt, htm, v, at);
+            });
+            
+            $("#set").on("click", function(){
+                $("p").text("happy");
+                $("p").html("<h1>happy</h1>");
+
+                var addr1 = $("#addr1").val();
+                $("#addr2").val(addr1);
+
+                $("a").attr("href","http://www.daum.net");
+
+                // 속성삭제
+                $("#addr2").removeAttr("name");
+
+            });
+
+        });   
+    </script>
+
+
+</head>
+<body>
+    <button id="get">출력</button>
+    <button id="set">설정</button>
+    <hr>
+    <p>Hello <em>world</em>!!!</p>
+    주소:<input type="text" name="userid" id="addr1"><br>
+    배송주소<input type="text" name="passwd" id="addr2"><br>
+    <a href="http://www.google.com">link</a>
+    <div id="result"></div>
+</body>
+</html>

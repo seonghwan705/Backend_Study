@@ -1,0 +1,5 @@
+/* CSS의 주석은 HTML과 다르다 */
+/* external style 방식 */
+div{
+    color: aqua;
+}

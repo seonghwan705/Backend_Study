@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* 속성값에 특정값이 포함되는 요소 반환, [href*= 값] */
+      
+      div[class*="man"]{
+        color: red;
+      }
+
+  
+    </style>
+</head>
+
+<body>
+  <!-- class는 여러 태그에 동일한 효과를 넣기 위해 사용 -->
+  <!-- class 속성은 중복가능하며, 공백을 구분하여 여러 번 사용가능 -->
+  <!-- 위의 말 예시 <tag class="A B C D E F" -->
+
+  <div class="man-news">man-news</div>
+  <div class="milk man">milk man</div>
+  <div class="letterman2">letterman2</div>
+  <div class="newmilk">newmilk</div>
+  <div class="superman">superman</div>
+</body>
+</html>

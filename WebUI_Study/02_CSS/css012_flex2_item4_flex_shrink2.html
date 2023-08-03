@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+      .container{
+            background-color: powderblue;
+            display: flex;
+            flex-direction: row;
+        }
+      .item{
+        background-color: tomato;
+        color:white;
+        border:1px solid white;
+
+        width: 350px;
+        flex-shrink: 2;
+      }
+      
+      /* 브라우저 화면을 줄이면 다른 것에 비해 3번이 덜 줄어든다. */
+      .item:nth-child(3){
+       background-color: black;
+        flex-shrink: 1;  
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <title>Static Template</title>
+	<style>
+          /*
+         TODO 목록
+
+         1. <div class="signUp"> 태그 선택
+           - 너비 60%
+           - 마진 위 값을 20px 설정
+
+         2. <table> 선택
+            - 너비 100% 설정
+
+         3. <th> 와 <td> 선택
+          - 패딩 5px 설정
+
+         4. table 태그의 자손인 input 선택
+            - 마진 오른쪽 값을 10px 설정
+            - 높이 35px 설정
+
+         5. table 태그의 자손인 input이 focus 받았을 때 
+          - 테두리 4px solid #006d94
+
+         6. input 태그에 focus 받은 경우
+          - 테두리 4px solid #006d94 설정
+
+         7. class="buttonDiv" 선택
+          - 마진 위 값을 20px 설정
+          - 글자 정렬은 center
+
+         
+         8. class="buttonDiv" 자손인 button 선택
+           - 백그라운드 #a3b926 설정
+
+        9. <h1> 선택
+          - 글자 정렬은 center
+
+
+ 
+      */
+
+	  
+      .addr{
+			  width: 60%;
+		  }
+      
+      button, select{
+        width: 120px;
+        height: 39px;
+        background: #000000;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 0 solid transparent;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        margin-right: 10px;
+		 }
+
+
+	</style>
+  </head>
+  <body>
+<div class="signUp">
+	<h1>회원 가입</h1>
+	<form action="signUp" method="POST">
+	<hr>
+	<table>
+		<tr>
+			<th>아 이 디</th>
+			<td>
+				<input type="text" name="userid" id="userid" required>
+				<button type="button" id="checkId">중복확인</button><span class="message" id="idMessage"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td>
+				<input type="password" name="passwd" id="passwd" required>
+			</td>
+		</tr>
+		<tr>
+			<th>비빌번호확인</th>
+			<td>
+				<input type="password" name="passwdConfirm" id="passwdConfirm" required> <span id="passwordMessage"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>이 름</th>
+			<td>
+				<input type="text" name="username" required>
+			</td>
+		</tr>
+		<tr>
+			<th>주 소</th>
+			<td>
+				<input type="text" name="post" id="postcode" placeholder="우편번호" required>
+				<button type="button" id="calldaumPostCode">우편번호검색</button><br>
+				<input type="text" class="addr" name="addr1" id="address" placeholder="주소" required><br>				
+				<input type="text" class="addr" name="addr2" id="detailAddress" placeholder="상세 주소">
+			</td>
+		</tr>
+		<tr>
+			<th>전화번호</th>
+			<td>
+				<select	name="phone1" required>
+					<option value="010" selected>010</option>
+					<option value="011">011</option>
+				</select>
+				<input type="text" name="phone2" required maxlength="4">
+				<input type="text" name="phone3" required maxlength="4">
+			</td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td>
+				<input type="text" name="email1" id="email1" required> @
+				<input type="text" name="email2" id="email2" required>
+				<select id="emailSelect">
+					<option value="">이메일선택</option>
+					<option value="daum.net">Daum</option>
+					<option value="naver.com">Naver</option>
+					<option value="gmail.com">Google</option>
+					<option value="self">직접 입력</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+	</table>
+	<hr>
+	<div class="buttonDiv">
+			<button type="submit">회원가입</button>
+			<button type="reset"> 지우기</button>
+	</div>
+	</form>
+</div>
+  </body>
+</html>

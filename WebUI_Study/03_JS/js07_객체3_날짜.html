@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+      
+       // Date 객체 : 날짜 데이터 관리
+
+       // 1. 생성방법
+
+        var d = new Date();
+        console.log(d);  // Tue Jul 04 2023 13:20:05 GMT+0900 (한국 표준시)
+        console.dir(d);
+        
+        console.log("년도:" , d.getFullYear());  
+        console.log("월:" , d.getMonth() + 1 );  // 0~11 범위로 관리. 따라서 +1   
+        console.log("일:" , d.getDate());  
+
+        console.log("시:" , d.getHours());  
+        console.log("분:" , d.getMinutes());  
+        console.log("초:" , d.getSeconds());  
+
+        // 날짜 변경
+        var d2 = new Date();
+        d2.setFullYear(2004);
+        d2.setMonth(7)
+        d2.setDate(4);
+        console.log(d2);
+
+    </script>
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+   
+</body>
+</html>

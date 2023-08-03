@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        
+
+        // DOM Tree가 모두 완료된후 호출
+        /*
+            $(선택자).each(function(idx, obj){});
+
+        */
+        $(document).ready(function(){
+        
+           // li 반복해서 값을 합계후 출력
+           var sum = 0;
+
+           $("li").each(function(idx,ele){
+               console.log(idx, ele); // JS객체
+               console.log(idx, $(ele), $(this)); // JQuery객체
+
+               var v = $(ele).text();  // $(this).text();
+               sum = sum + Number.parseInt(v);
+           });
+
+           $("#result").text(sum);
+
+        });   
+    </script>
+
+
+</head>
+<body>
+  <ul>
+    <li>100</li>
+    <li>200</li>
+    <li>300</li>
+    <li>400</li>
+    <li>500</li>
+  </ul>
+  합계:<div id="result"></div>
+     
+</body>
+</html>

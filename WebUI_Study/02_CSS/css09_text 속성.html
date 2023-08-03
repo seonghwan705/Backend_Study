@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+      /* text 속성 */
+      p {
+        color: red;
+        text-align: center;
+
+        /* 찍찍 선긋기 */
+        text-decoration: line-through;
+        text-transform: uppercase;
+      }
+      p.small {
+        color: blue;
+        text-align: right;
+
+        /* 글자 위에 선긋기 */
+        text-decoration: overline;
+        /* 단어 첫글자만 대문자 */
+        text-transform: capitalize;
+        /* 줄간격 */
+        line-height: 2;
+      }
+      div {
+        width: 200px;
+        height: 250px;
+        border: 5px solid red;
+        /* 문장 양쪽 정렬 */
+        text-align: justify;
+        /* 들여쓰기 */
+        text-indent: 20px;
+      }
+      h1 {
+        /* 글자 간의 간격 (단위 기재 필수) */
+        letter-spacing: 10px;
+      }
+      h2 {
+        /* 단어 간의 간격 */
+        word-spacing: 40px;
+      }
+    </style>
+</head>
+<body>
+  <p>Lorem ipsum</p>
+  <!-- div 는 block 레벨 width height 조정가능 -->
+  <div>
+     In my younger and more vulnerable years my father 
+     gave me some advice that I've been turning over 
+     in my mind ever since. 'Whenever you feel like criticizing 
+     anyone,' he told me, 'just remember that all the people in 
+     this world haven't had the advantages that you've had.'
+  </div>
+  <p class="small">
+     smaller line-height.<br>
+     smaller line-height.<br>
+  </p>
+  <h1>This is heading 1</h1>
+  <h2>This is heading 2</h2>
+</body>
+</html>

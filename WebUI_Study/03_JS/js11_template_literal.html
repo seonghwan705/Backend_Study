@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <amet name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        
+        // template literal 사용 ( 백틱 사용)
+        var n1 = 'hello';
+        var n2 = "hello";
+
+
+        var n3 = `hello`;
+        console.log(n1);
+        console.log(n2);
+        console.log(n3);
+        
+
+        //1. 장점 ==> 변수삽입 가능
+        var name= "홍길동";
+        var age = 20;
+
+        var n = "이름:"+name+", 나이:"+age;
+        var n2 = `이름:${name}, 나이:${age}`;
+
+        console.log(n);  // 이름:홍길동, 나이:20
+        console.log(n2); // 이름:홍길동, 나이:20
+
+        //2. 장점 ==> html태그 같은 특정 형식을 가진 문자열을 가독성이 높도록 표현 가능
+        var n1 = "<table><tr><th>이름</th><th>나이</th></tr>";
+            n1+ " <tr><td>홍길동</td><td>20</td></table>"
+        var n2 = `<table>
+                    <tr>
+                      <th>이름</th>
+                      <th>나이</th>
+                    </tr>
+                    <tr>
+                       <td>홍길동</td>
+                       <td>20</td>
+                    </tr>
+                  </table>
+                       `;
+        console.log(n1);
+        console.log(n2);
+
+    </script>
+
+</head>
+<body> 
+</body>
+</html>

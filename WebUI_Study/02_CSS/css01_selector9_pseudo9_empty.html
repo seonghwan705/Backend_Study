@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* 자식이 없는 태그 반환 :empty */
+
+    /* 부모기준이라기 보다는 기준태그의 몸체 또는 
+    자식이 비어있는 경우 적용된다고 보시면 됩니다. */
+    p:empty{
+      background-color: yellowgreen;
+      width:  50px; /*가로길이*/
+      height: 50px; /*세로길이*/
+    }
+    div:empty{
+      background-color: yellowgreen;
+      width:  50px; /*가로길이*/
+      height: 50px; /*세로길이*/
+    }
+    </style>
+</head>
+
+<body>
+  <p></p>
+  <p>2</p>
+  <p>3</p>
+  <div></div>
+</body>
+</html>

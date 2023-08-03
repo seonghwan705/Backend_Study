@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* 
+      * 내용물의 너비 : width
+      * 내용물의 높이 : height
+
+      1. width와 height 는 기본적으로 설정하지 않으면
+      기본영역의 크기로 설정된다
+
+      2. inline 스타일은 기본적으로 width와 height가 적용 안된다.
+          적용하려면 inline-block 지정한다.   */
+
+     div, span{
+      background-color: yellow;
+     }
+
+     #a2, #b2{
+      width: 30px;
+      height: 30px;
+      background-color: aquamarine;
+     }
+     #c {
+      width: 30px;
+      height: 30px;
+      background-color: red;
+     }
+    </style>
+</head>
+
+
+<body>
+  <!-- div는 block레벨로 가로를 다 채워야 
+  다음줄로 넘어간다, 따라서 div는 width, height 설정이 가능 -->
+
+  <!--span은 inline레벨로 세로, 자기 몸체 영역까지만이 기본영역
+  width와 height 설정이 불가 -->
+
+  <div id="a">a</div>
+  <div id="b">b</div>
+<hr>
+
+<!-- inline : width, height 설정불가, 줄바꿈 X  (span은 inline) -->
+  <span>Hello</span>
+  <span>Hello</span>
+  <span>Hello</span>
+<hr>
+<!-- block : 라인 새로 추가, 한 영역을 차지하는 박스형태를 가지는 성질, div는 block -->
+  <div id="a2">a</div>
+  <div id="b2">b</div>
+  <span id="c">Hello2</span>
+</body>
+</html>

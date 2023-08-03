@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <amet name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+
+      var httpRequest=null; 
+      function req(){
+         httpRequest = new XMLHttpRequest();
+         console.dir(httpRequest);
+
+         // 응답시 처리하는 콜백함수
+         httpRequest.onreadystatechange=responseFun;
+
+         
+         var date = document.querySelector("#date").value;
+
+         // 요청정보 설정
+         var url = `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=${date}`;
+         httpRequest.open("get", url, true);  // 마지막 boolean 값: true이면 비동기로 처리, false이면 동기로 처리
+         // 요청하기
+         httpRequest.send(null);   // get방식이면 null 지정.
+      }
+      function responseFun(){
+          // 요청이 성공인 경우에 처리 ==> readyState값은 4 , status 값은 200
+          if(httpRequest.readyState == 4 && httpRequest.status == 200){
+              // 서버에서 응답한 JSON 얻기
+              var str = httpRequest.responseText;
+              var json = JSON.parse(str);
+              var dailyBoxOfficeList = json.boxOfficeResult.dailyBoxOfficeList;
+              var table = `
+                  <table>
+                     <tr>
+                       <th>순위</th>
+                       <th>제목</th>
+                       <th>개봉일</th>
+                     </tr>`;
+                   for(var daily of dailyBoxOfficeList){  
+                     table +=`<tr>
+                       <td>${daily.rank}</td>
+                       <td>${daily.movieNm}</td>
+                       <td>${daily.openDt}</td>
+                     </tr>`;
+                    }
+                   table+=`</table>`;
+              document.querySelector("#result").innerHTML=table;
+          }
+      }
+     
+
+    
+    </script>
+
+</head>
+<body>
+  날짜: <input type="text" id="date">
+  <button onclick="req()">ajax요청</button>
+  <div id="result"></div>
+</body>
+</html>

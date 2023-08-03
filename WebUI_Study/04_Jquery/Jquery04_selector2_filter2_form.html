@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>  
+    
+    <script>
+       // DOM Tree가 모두 완료된 후 호출
+       
+       $(document).ready(function(){
+
+          // 가.  :button ==> 요소 찾기 <button>, <input type='button'>
+          // var n = $(":button");
+            
+          // 나. :checkbox ==> <input type='checkbox'>
+          // var n = $(":checkbox");
+
+           // 다. :checked ==> input 태그의 checkbox 요소 중에서 checked된 요소 반환. 
+           var n = $("input:checked");
+          console.log(n);
+
+       }); 
+
+    </script>
+</head>
+<body>
+  <button>버튼1</button>
+  <form>
+  <button>버튼2</button>
+  <input type="text" name="aaa">
+  <input type="text" name="bbb" disabled="disabled">
+  <input type="checkbox" name="bbb" value="xxx" >
+  <input type="checkbox" name="ccc" value="xxx2" checked>
+  <select>
+   <option value="1">1</option>
+   <option value="2">2</option>
+   <option value="3">3</option>
+  </select>
+  </form>	
+  
+  
+  # 2. Filter3 - content
+  <div>John Resig</div>
+    <div>George Martin</div>
+    <div>Malcom john Sinclair</div>
+    <div>
+      <p>HiJohn Resig</p>
+    </div>
+  
+    <table border="1">
+      <tr><td>TD #0</td><td></td></tr>
+      <tr><td>TD #2</td><td></td></tr>
+      <tr><td></td><td>TD#5</td></tr>
+    </table>
+  
+</body>
+</html>

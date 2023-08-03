@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CDN 방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        
+
+        // DOM Tree가 모두 완료된후 호출
+      
+        $(document).ready(function(){
+        
+            $("#ok").on("click",function(){
+
+              // https://reqres.in/api/users?page=2 얘를 비동기로 요청해야함
+              $.ajax({
+                type : "get", 
+                url : "https://reqres.in/api/users",
+                data : {
+                  page:2
+                }, // 여기까지가 요청코드
+                dataType : 'text', // 텍스트로 받을 수 있고, json으로 받을 수도 있음.
+                success : function(data, status, xhr){
+                    console.log(data);
+                    $("#result").text(data); // data를 문자열로 받아서 result div의 body에 출력!
+                },
+                error : function(xhr, status, error){
+                    console.log("error 발생");
+                } // 여기까지가 응답코드
+              });
+
+            });
+      
+        });   
+    </script>
+
+
+</head>
+<body>
+  <button id="ok">요청</button><br>
+  <div id="result"></div>
+
+</body>
+</html>

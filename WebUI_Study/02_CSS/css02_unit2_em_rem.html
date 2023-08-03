@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* em은 부모기준, 1.5em=24px 자식은 1.5em=36px */
+    #a li{
+      font-size: 1.5em;
+    }
+     /* rem은 root부모기준(body=16px), 1.5em=24px 자식도 1.5em=24px */
+    #b li{
+      font-size: 1.5rem;
+    }
+    </style>
+</head>
+
+<body>
+  <h2>em</h2>
+  <ul id="a">
+    <li>AAA</li>
+    <li>AAA2</li>
+    <li>
+      <ul>
+        <li>BBB</li>
+        <li>BBB2</li>
+      </ul>
+    </li>
+  </ul>
+<h2>rem</h2>
+  <ul id="b">
+    <li>AAA</li>
+    <li>AAA2</li>
+    <li>
+      <ul>
+        <li>BBB</li>
+        <li>BBB2</li>
+      </ul>
+    </li>
+  </ul>
+  
+</body>
+</html>

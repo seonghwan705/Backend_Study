@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+         /*
+        button, checkbox : click 이벤트 타입     ==> onclick
+        form태그의 submit : submit 이벤트타입     ==> onsubmit (중요)
+        input : keyup 이벤트타입                 ==> onkeyup
+        select : change 이벤트 타입              ==> onchange
+        img : mouseover, mouseout 이벤트타입     ==> onmouseover, onmouseout
+        */
+
+        // 시스템이 호출
+    /* 
+        [발생위치 ] : body tag 
+        [발생하는 이벤트] : load 이벤트 => onload
+        [시기] : DOM트리 완성될때
+    */
+        
+    // onload html 문서나 이미지의 로딩이 완료되는 시점에 호출되는 이벤트 리스너 
+        
+        function fun(){
+            console.log("fun");
+         
+        }
+
+
+    </script>
+</head>
+
+<body onload="fun()">
+   
+
+
+</body>
+</html>

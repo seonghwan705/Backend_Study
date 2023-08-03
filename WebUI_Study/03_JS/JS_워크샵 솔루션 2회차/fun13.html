@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   
+   /*
+       배열중에서 최대값 구하기
+   */
+   function max(m){
+	  var maxNum;
+	  for(var i=0;i<m.length;i++){
+		if( maxNum == undefined ) {
+		 maxNum = m[i];
+		};
+	    if (maxNum < m[i]) {
+	     maxNum = m[i];
+	    }
+	  }
+	  return maxNum;
+   }
+   
+   var arr = [ 11, 2, 33, 54, 5];
+   var m = max(arr);
+   console.log("최대값:", m );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+      
+        // 연산자 6 - 증감 연산자 
+      
+        //1. 전치
+        var n = 5;
+        ++n;   // n = n + 1;
+        console.log("전치:", n);
+        
+        //2. 후치
+        var n = 5;
+        n++;   // n = n + 1;
+        console.log("후치:", n);
+        
+        
+        // 주의할 점 : 다른 연산자와 같이 사용시 전치/후치에 따라서 할당되는 값이 달라진다.
+        
+        //1. 전치
+        var n = 5;
+        var x = ++n;
+        console.log("전치:", n, x );
+
+        //2. 후치
+        var n = 5;
+        var x = n++;
+        console.log("후치:", n, x );
+
+    </script>
+
+</head>
+<body>
+  
+    <p>안녕하세요</p>
+   
+</body>
+</html>

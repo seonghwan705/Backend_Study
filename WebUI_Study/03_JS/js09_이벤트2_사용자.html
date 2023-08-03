@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+         /*
+        button, checkbox : click 이벤트 타입     ==> onclick
+        form태그의 submit : submit 이벤트타입     ==> onsubmit (중요)
+        input : keyup 이벤트타입                 ==> onkeyup
+        select : change 이벤트 타입              ==> onchange
+        img : mouseover, mouseout 이벤트타입     ==> onmouseover, onmouseout
+        */
+
+        // 이벤트 발생 시, 실행될 함수
+        function fun(){
+            console.log("fun", event);
+            console.dir(event);
+            
+            event.preventDefault(); // 자동 서브밋 방지, form의 action으로 페이지가 넘어가는 것 방지
+        }
+
+        function xxx() {
+            console.log("xxx");
+        }
+        
+        function yyy() {
+            console.log("yyy");
+            event.stopPropagation(); // 전파방지 
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 이벤트 발생 버튼 -->
+
+    <!-- input에다 onsubmit 붙이는게 아니라, form태그에 붙이는 것 -->
+    <h2>자동 서브밋 방지</h2>
+    <form action="target.html" method="get" onsubmit="fun()">
+        나이:<input type="text" name="age"><br>
+       
+        <input type="submit" value="전송" >
+      </form>
+
+    
+    <h2>이벤트 전파 방지</h2>
+    <!-- 붙어있는 레이아웃이 겹쳐져서 동시에 이벤트 발생하는 것을 방지해주는 용도 -->
+    <div style="background: yellow;" onclick="xxx()">
+     xxx
+        <div style="background-color: blue;" onclick="yyy()">
+         yyy
+        </div>
+    </div>
+
+</body>
+</html>

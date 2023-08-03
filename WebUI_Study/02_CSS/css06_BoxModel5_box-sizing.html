@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+   /* 
+   box-sizing : width와 height 값이 동일하다면, 
+   margin값들이 달라도 동일한 크기로 제공된다. */
+
+   /* 
+   box-sizing : border-box, width, height만 입력하면 
+   margin, padding 값이 달라도 동일한 크기로 맞춰준다 */
+   
+   #one{
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    padding: 30px;
+    border: 5px solid red;
+    box-sizing: border-box;
+   }
+   #two{
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    border: 5px solid red;
+    box-sizing: border-box;
+   }
+    </style>
+</head>
+
+
+<body>
+
+  <div id="one">hello</div>
+  <div id="two">hello</div>
+
+</body>
+</html>

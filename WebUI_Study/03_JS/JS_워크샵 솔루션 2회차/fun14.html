@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   
+   /*
+      배열값을 오름 차순 정렬 ( bubble sort )
+   */
+   function asc(m){
+	   for(var i=0;i<m.length-1;i++){
+			for(var j=0;j<m.length-1-i;j++){
+				if(m[j]>m[j+1]){
+					var temp = m[j];
+					m[j] = m[j+1];
+					m[j+1] = temp;
+				}
+			}
+		}
+	  return m;
+   }
+   
+   var arr = [ 11, 2, 33, 54, 5];
+   var m = asc(arr);
+   console.log("오름차순 정렬:", m );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

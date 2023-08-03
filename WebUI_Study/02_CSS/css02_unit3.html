@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* 절대값 */
+      #a{
+        width: 1000px;
+        height: 300px;
+        background-color: yellow;
+      }
+      /* id 속성 값 a의 자식인 div 찾기 */
+      #a > div{
+        width: 500px;
+        height: 300px;
+        background-color: black;
+      }
+      /* 상대값 */
+      #b{
+        width: 80%;
+        height: 300px;
+        background-color: aqua;
+      }
+       /* id 속성 값 b의 자식인 div 찾기 */
+      #b > div {
+        width: 50%;
+        height: 300px;
+        background-color: red;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="a">
+    <div>
+     Hello
+    </div>
+ </div>
+ 
+ <div id="b">
+   <div>
+    world
+   </div>
+</div>
+</body>
+</html>

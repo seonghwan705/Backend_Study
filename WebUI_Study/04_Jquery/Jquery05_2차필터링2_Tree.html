@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>  
+    
+    <script>   
+
+       $(document).ready(function(){
+
+          // 가. $(selector1).children() ==> 1차 필터링의 모든 자식요소 반환 (자손포함안됨)
+          // 가. $(selector1).children(selector2) ==> 1차 필터링 selector2와 일치하는 자식요소 반환 (자손포함안됨)
+          // $("div").children("span").css("color", "red");
+          
+          // 나. $(selector1).find(selector2) ==> 1차 필터링의 selector2 와 일치하는 자식요소 반환 (자손포함)
+          // $("div").find("span").css("color", "red");
+         
+          // 다. $(selector1).parent( ) ==> 1차 필터링 후 모든 부모요소 반환 (조상 미포함)
+          // 다. $(selector1).parent(selector2) ==> 1차 필터링 후 selector2 와 일치하는 부모요소 반환 (조상 미포함)
+          // $("p").parent().attr("id","xyz"); // attr(속성명, 속성값)
+
+          // 라. $(selector1).parents( ) ==> 1차 필터링 후 모든 부모요소 반환 (조상 포함)
+          // 라. $(selector1).parents(selector2) ==> 1차 필터링 후 selector2 와 일치하는 부모요소 반환 (조상 포함)
+             $("p").parents().attr("id","xyz");
+      
+        }); 
+
+    </script>
+</head>
+<body>
+  <div>
+		<span>this is 1st p</span>
+	</div>
+	<div>
+	  <p>
+		<span>this is 2nd p</span>
+	  </p>	
+	</div>
+	<div class="myClass">
+		<span>this is 3rd p</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* class 선택자는 '.'  */
+      .font-arial{
+        font-family: '없는 폰트', 'Gill Sans', serif;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+      }
+      /* 개별표현식 */
+      .font-roman{
+        font-family: '없는 폰트', 'Gill Sans', sans-serif;
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: bold;
+      }  
+      /* 단축표현식 */
+      /* 스타일 weight 사이즈 family 순  */
+      .font-ansang{
+        font: italic bold 3rem '없는 폰트', 'Gill Sans', sans-serif
+      }
+      
+     
+    </style>
+</head>
+
+
+<body>
+  <div class="font-arial">Lorem ipsum</div>
+   <div class="font-roman">Lorem ipsum</div>
+   <div class="font-ansang">Lorem ipsum</div>
+   <div class="font-md">Lorem ipsum</div>
+
+</body>
+</html>

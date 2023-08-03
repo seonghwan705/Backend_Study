@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // BOM ( Browser Object Model )
+        // 웹 브라우저를 OPEN 시, 객체가 자동으로 생성
+        // 객체 종류 : Window, Screen, Navigator, Location, History 
+    /* 
+        - var window = new Window();
+        - var screen = new Screen();
+        - var history = new History();
+        - var location = new Location();
+        - var navigator = new Navigator();
+    */
+
+    // 3. Location 객체 : 웹 브라우저 URL 관련
+    console.log(location.href); // http://127.0.0.1:5500/03_JS/js07_%EA%B0%9D%EC%B2%B46_BOM4.html
+    console.log(location.protocol); // http:
+    console.log(location.pathname); // /03_JS/js07_%EA%B0%9D%EC%B2%B46_BOM4.html
+    console.log(location.host); // 127.0.0.1:5500
+    console.log(location.port); // 5500
+   
+    function req (){
+        location.href="http://www.google.com"; 
+
+        // location의 href속성 (property)은 URL변경이 가능
+    }
+    function req2 (){
+        location.reload();
+
+        // location의 reload method, 새로고침 기능 
+    }
+
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+    <button onclick="req()">구글</button> <!--버튼을 클릭하면 req함수를 실행해라-->
+    <button onclick="req2()">새로고침</button>
+</body>
+</html>

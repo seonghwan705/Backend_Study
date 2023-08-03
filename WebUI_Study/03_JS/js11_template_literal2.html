@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <amet name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        
+        function btn_change(){
+           var username = document.querySelector("#username").value;
+           var age = document.querySelector("#age").value;
+
+           var table = `
+                  <table>
+                     <tr>
+                       <th>이름</th>
+                       <th>나이</th>
+                     </tr>
+                     <tr>
+                       <td>${username}</td>
+                       <td>${age}</td>
+                     </tr>
+                  </table>  
+               `;
+
+            document.querySelector("#xxx").innerHTML=table;
+        }
+      
+  </script>
+
+</head>
+<body>
+   이름: <input type="text" id="username">
+   나이: <input type="text" id="age">
+
+   <p id="xxx"><span>Hello</span></p>
+   <button onclick="btn_change()">출력</button>
+
+</body>
+</html>

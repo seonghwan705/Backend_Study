@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <amet name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+
+      // "JSON" --> JSON
+      var str = "[10,20,30]";
+      var json = JSON.parse(str);
+      console.log(typeof str, typeof json);  // string object
+      console.log(json[0], json[1]);
+      
+      // JSON --> "JSON"
+      var json = [9,8,7];
+      var str = JSON.stringify(json);
+      console.log(typeof str, typeof json);  // string object
+
+    
+    </script>
+
+</head>
+<body>
+ 
+</body>
+</html>

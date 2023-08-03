@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   
+   /*
+       대문자, 소문자 , 거꾸로 반환
+   */
+   function xyz(m){
+	  var upper = m.toUpperCase();
+	  var lower = m.toLowerCase();
+	  var kkk = '';
+	  for(var i=m.length-1; i >=0; i--){
+		  kkk = kkk+ m[i];
+	  }
+	  return upper+"\t"+lower+"\t"+kkk;
+   }
+   
+   var data = xyz('AbCDeF');
+   console.log("데이터", data );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

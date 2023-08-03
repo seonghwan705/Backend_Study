@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>안녕하세요</title>
+</head>
+<body>
+    <!-- 사용자 데이터 입력 태그 -->
+        <!-- 
+            [ 속성 종류 ]
+            required : 필수요소 작성
+            label : 말그대로 라벨, 
+            value : 기본값
+            readonly: 읽기만 가능하고 수정안됌
+            placeholder : 회색으로 입력란에 적는것
+            id : 말그대로 id 
+            autofocus : 자동으로 커서 잡아줌
+            name : 서브밋할 때 네임이 있어야 데이터가 전달됌
+            http://127.0.0.1:5500/target.html?age=10 주소에 age 값이 전달된것
+
+        -->
+        <h2>GET 방식</h2>
+        <form action="target.html" method="get">
+            나이:<input type="text" name="age"   id="age" value="10" readonly><br>
+            <label for="name">이름:</label><input type="text" name="username" autofocus  id="name"><br>
+            <input type="text" name="address" required placeholder="주소입력" id="address"><br>
+       
+            <input type="submit"  value="로그인2">
+        </form>
+        <h2>POST 방식</h2>
+        <form action="target.html" method="post">
+            나이:<input type="text" name="age"   id="age" value="10" readonly><br>
+            <label for="name">이름:</label><input type="text" name="username" autofocus  id="name"><br>
+            <input type="text" name="address" required placeholder="주소입력" id="address"><br>
+       
+            <input type="submit"  value="로그인2">
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Number 객체 ==> 수치 데이터 관리
+       
+        // 1. 생성방법
+
+        var n =10;  // 권장
+        var n =new Number(10);
+        console.dir(n); // 객체는 dir, 나머지는 log
+
+        // 2. property 와 method 
+        console.log("1. 최대값:", Number.MAX_VALUE);       
+        console.log("2. 최소값:", Number.MIN_VALUE);       
+
+        // 수치를 문자열로 변경
+        console.log("3. 수치값을 문자열로 변경:", n.toString(), typeof n.toString);  // 10진법
+        console.log("3. 수치값을 문자열로 변경:", n.toString(2), n.toString(8), n.toString(16),);  // 2진법, 8진법, 16진법
+        
+        // 반올림
+        var n2 = 15.673;
+        console.log("4. 정수로:", n2.toFixed());
+        console.log("5. 소수점 둘째 자리:", n2.toFixed(2));
+
+        // 문자열 ==> 정수
+        console.log("6. 문자열==>정수:", Number.parseInt("10")+10);
+        console.log("6. 문자열==>실수:", Number.parseInt("3.24")+10);
+        
+        // 문자타입 확인
+        console.log("7. 정수가 맞는지 :", Number.isInteger(10),Number.isInteger("hello"));
+        console.log("8. NaN이 맞는지 :", Number.isNaN(NaN),Number.isNaN("hello"));
+
+
+
+
+    
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   // 함수 (function)
+
+ 
+   // 1. 즉시실행 함수 ==> 함수를 정의하면서 동시에 호출
+   // 끝에 () 붙이고 전체를 ()로 한번 더 감싸기
+   // JS의 프레임워크(라이브러리)에 주로 사용됨
+
+   // 함수선언식 즉시실행 함수
+        (function fun() {
+            console.log("fun");
+            
+        }());
+    // 함수 표현식 즉시실행 함수
+    ( function () {
+            console.log("fun");
+            
+        }());
+
+   // 2. 콜백함수 (매우 중요)
+   /*
+        - 콜백함수는 사용자가 호출하지 않고
+          특정 순간에 시스템이 호출하는 함수를 의미한다.
+
+        - 이벤트 처리시 주로 사용 (트리거 (trigger))
+    */
+
+    function a(n) {
+        n();
+    }
+
+    function b(){ // 콜백함수 : 시스템이 호출한 형태로 사용됨.
+        console.log("callback");
+    }
+
+    a(b); 
+    // 사용자가 함수를 호출하면서 
+    // 시스템이 호출하는 함수명을 파라미터로 전달
+
+    // 3. arrow 함수 : => 표현
+
+  
+    // 가. 파라미터 x 리턴 x
+    var fun = function(){
+    console.log("함수 표현식");}
+
+    // arrow 함수
+    var fun = ( ) => {
+        console.log("arrow함수1")
+    }
+
+    fun(); // 호출
+
+   
+    // 나. 파라미터 o 리턴 x
+    var fun = function(n){console.log("함수표현식")};
+    
+    // arrow 함수
+
+    var fun = (n) => {console.log("arrow함수2")};
+    var fun = n => {console.log("arrow함수2 : 파라미터 o 리턴 x")}; // 파라미터 하나면 괄호 생략가능
+    fun(); //호출
+
+    
+    // 다. 파라미터 2개 리턴 x
+    var fun = function(n,n2){console.log("함수표현식")};
+    var fun = (n,n2) => {console.log("arrow함수3 : 파라미터 2 리턴 x")};
+    fun(); // 호출
+
+   
+    // 마. 파라미터 o 리턴 o 
+    var fun = function(n,n2){
+        console.log("함수표현식")
+        return n+n2
+    };
+    var fun = (n,n2) => {
+        console.log("arrow함수4 : 파라미터 o 리턴 o")
+        return n+n2
+    };
+    fun(); // 호출
+
+    
+    // 바. 파라미터 o 리턴 문장만 있는경우
+    var fun = function(n,n2){
+        return n+n2
+    };
+    var fun = (n,n2) => n+n2; 
+
+    var result = fun(2,2);
+    console.log(result);
+
+    
+    // arrow 함수 활용!
+    var arr = [6,2,8,5,1,7,9];
+
+    // arr.sort(function(a,b){return b-a}); // 내림차순, 함수표현식 (익명함수)
+
+    arr.sort((a,b) => b-a); // arrow 함수
+    console.log(arr);
+
+
+    
+
+
+
+
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+    
+</body>
+</html>
